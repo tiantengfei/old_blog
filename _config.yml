@@ -7,8 +7,8 @@ dropcap:			true
 # Change url to your domain. Leave localhost server or blank when working locally.
 # or use the hint from http://jekyllrb.com/docs/github-pages/ to keep this the same 
 # whether working locally or remotely. Start Jekyll with: jekyll serve --baseurl ''
-url:        	  /Notepad
-
+#url:        	  /Notepad
+#gems: [jekyll-paginate]
 # Owner/author information
 owner:
   name:           Hossain Mohd Faysal
@@ -45,7 +45,7 @@ links:
     url: /about
 
 # http://en.wikipedia.org/wiki/List_of_tz_database_time_zones
-timezone:    Asia/Dhaka
+timezone:    Asia/Shanghai
 future:      true
 highlighter: pygments
 markdown:    kramdown
