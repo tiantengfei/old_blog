@@ -84,3 +84,6 @@ pixel－wise之间的损失为：
 
 #### 3.总结
 作者提出了无监督的hash方法，主要解决了不在relaxation的情况下如何直接生成图片的hash和如何使得生成的hash能够准确的实现image Retrieval。
+
+#### 参考文献
+[Binary Generative Adversarial Networks for Image Retrieval](https://arxiv.org/pdf/1708.04150)
