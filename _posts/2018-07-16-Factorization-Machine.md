@@ -7,13 +7,13 @@ category: deeplearning
 imagefeature: cover6.jpg
 comments: true
 share: true
-mathjax: true
+math: true
 ---
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;随机算法共分为两类:(1)拉斯维加斯算法(Las Vegas algorithms):总是返回精确的结果(2)蒙特卡洛方法(Monte Carlo Methods ):提供近似的结果。机器学习中，很多问题是难以计算出准确的结果，这时就需要蒙特卡洛等近似算法。蒙特卡洛算法通过采样得到难以计算的求和或者积分的结果，大大的减少了基计算的难度。
 #### 蒙特卡洛采样的基础
 蒙特卡洛方法将求和或者积分问题看作求某一分布下的期望。
-对于离散变量   $X$:
+对于离散变量  $X$:
 
 $$s=$$
 对于连续变量$X$:
