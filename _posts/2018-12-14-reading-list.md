@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Monte-Carlo-Methods
+title: reading list
 description: ""
 tags: [deeplearning]
 category: deeplearning
@@ -21,4 +21,4 @@ math: true
 Video Understanding. (2018).[status:<span style="color:red">no reading</span>]
 
 #### Attention
-* An Introductory Survey on Attention Mechanisms in NLP Problems.[status:<span style="color:red">no reading</span>]
+* An Introductory Survey on Attention Mechanisms in NLP Problems.[status:<span style="color:red">read done </span>]
