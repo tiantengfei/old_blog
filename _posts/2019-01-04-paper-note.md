@@ -28,14 +28,14 @@ mathjax: true
 $DEC\left ( z_{i},z_{j} \right )\approx s_{g}\left ( z_{i},z_{j}\right )$
 
 1. loss函数。  
- $\sum_{(v_{i},v_{j})\in D)}l\left( DEC\left ( z_{i},z_{j} \right ), s_{g}\left ( z_{i},z_{j}\right )\right )$
+ $$\sum_{(v_{i},v_{j})\in D)}l\left( DEC\left ( z_{i},z_{j} \right ), s_{g}\left ( z_{i},z_{j}\right )\right )$$
     
    
 #### 二、直接embeeding的方法
 直接embeediing的方法首先随机初始化结点的embeeding,然后在训练的过程中优化embeeding。
 #####  Laplacian eigenmaps方法
 deconder为:  
-$DEC\left ( z_{i},z_{j} \right )= \left \| z_{i}-z_{j} \right \|^{2}$  
+$$DEC\left ( z_{i},z_{j} \right )= \left \| z_{i}-z_{j} \right \|^{2}$$ 
 损失函数为:  
 $L= \sum_{(v_{i},v_{j})\in D)} DEC\left ( z_{i},z_{j} \right )\cdot s_{g}\left ( z_{i},z_{j}\right )$
 
