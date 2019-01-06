@@ -56,7 +56,11 @@ $$L= \sum_{(v_{i},v_{j})\in D)} \left \|DEC\left ( z_{i},z_{j} \right )-s_{g}\le
 **<center>图3 DFS和BFS学习的embeeding对比 DFS(上) BFS(下)</center>**
 
 现实中的图常常同时具有以上两种属性，node2vec在bfs和dfs基础之上设计了更加灵活的邻近结点的采样的方法，提高了结点embeeding在各种任务上的表现。  
-假设随机游走的长度为 \(l\)，\(c_{i}\)是这次游走的第$i$个结点，假设初始的结点$c_{0}$为$u$，则
+假设随机游走的长度为 $l$ 
+$c_{i}$
+是这次游走的第
+$i$
+个结点，假设初始的结点$c_{0}$为$u$，则
 $$P(c_{i}|c_{i-1}) =\left\{\begin{matrix}
  \frac{\pi _{vx}}{Z}&if(v,x)\epsilon E \\ 
  0&otherwise 
