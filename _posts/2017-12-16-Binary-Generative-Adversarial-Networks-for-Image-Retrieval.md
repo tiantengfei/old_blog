@@ -87,3 +87,6 @@ pixel－wise之间的损失为：
 
 #### 参考文献
 [Binary Generative Adversarial Networks for Image Retrieval](https://arxiv.org/pdf/1708.04150)
+
+
+

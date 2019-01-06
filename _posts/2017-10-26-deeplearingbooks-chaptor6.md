@@ -7,6 +7,7 @@ category: deeplearning
 imagefeature: cover6.jpg
 comments: true
 share: true
+mathjax: true
 ---
 
 <script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=default"></script>
@@ -19,7 +20,7 @@ share: true
 极大似然估计的特点：
 * ##### 当训练样本的数量接近无穷，极大似然估计能够获得真实分布的参数。
     需要满足一下的条件
-    * 真实的分布必须包含在$$p_{model}(\cdot ;\Theta )$$
+    * 真实的分布必须包含在 $$p_{model}(\cdot ;\Theta )$$
     * 真实的数据分布必须只有一组对应的$$\Theta$$
 
 

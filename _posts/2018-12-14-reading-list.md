@@ -21,4 +21,14 @@ math: true
 Video Understanding. (2018).[status:<span style="color:red">no reading</span>]
 
 #### Attention
-* An Introductory Survey on Attention Mechanisms in NLP Problems.[status:<span style="color:red">read done </span>]
+* An Introductory Survey on Attention Mechanisms in NLP Problems.[status:<span style="color:green">read done </span>]
+
+
+
+#### nlp
+*  Sequence to sequence learning with neural networks.[status:<span style="color:red">no reading</span>]
+*  Attention Is All You Need.[status:<span style="color:green">reading done</span>]
+
+#### graph
+* Representation Learning on Graphs: Methods and Applications.[status:<span style="color:green"> read done</span>]
+* SEMI-SUPERVISED CLASSIFICATION WITH GRAPH CONVOLUTIONAL NETWORKS.[status:<span style="color:red">no reading</span>]
