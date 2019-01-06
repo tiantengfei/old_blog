@@ -37,13 +37,13 @@ $DEC\left ( z_{i},z_{j} \right )\approx s_{g}\left ( z_{i},z_{j}\right )$
 deconder为:  
 $$DEC\left ( z_{i},z_{j} \right )= \left \| z_{i}-z_{j} \right \|^{2}$$ 
 损失函数为:  
-$L= \sum_{(v_{i},v_{j})\in D)} DEC\left ( z_{i},z_{j} \right )\cdot s_{g}\left ( z_{i},z_{j}\right )$
+$$L= \sum_{(v_{i},v_{j})\in D)} DEC\left ( z_{i},z_{j} \right )\cdot s_{g}\left ( z_{i},z_{j}\right )$$
 
 #####  inner-product方法
 decoder为:    
-$DEC\left ( z_{i},z_{j} \right )= z_{i}^{T}\cdot z_{j}$  
+$$DEC\left ( z_{i},z_{j} \right )= z_{i}^{T}\cdot z_{j}$$  
 损失函数为:  
-$L= \sum_{(v_{i},v_{j})\in D)} \left \|DEC\left ( z_{i},z_{j} \right )-s_{g}\left ( z_{i},z_{j}\right ) \right \|_{2}^{2}$
+$$L= \sum_{(v_{i},v_{j})\in D)} \left \|DEC\left ( z_{i},z_{j} \right )-s_{g}\left ( z_{i},z_{j}\right ) \right \|_{2}^{2}$$
 
 ##### 随机游走(random walk)的方法
 随机游走的方法类似于NLP中训练词向量，通过随机游走来确定结点的上下文结点来优化embeeding。这里主要介绍下node2vec。
@@ -57,19 +57,19 @@ $L= \sum_{(v_{i},v_{j})\in D)} \left \|DEC\left ( z_{i},z_{j} \right )-s_{g}\lef
 
 现实中的图常常同时具有以上两种属性，node2vec在bfs和dfs基础之上设计了更加灵活的邻近结点的采样的方法，提高了结点embeeding在各种任务上的表现。  
 假设随机游走的长度为$l$，$c_{i}$是这次游走的第$i$个结点，假设初始的结点$c_{0}$为$u$，则
-$P(c_{i}|c_{i-1}) =\left\{\begin{matrix}
+$$P(c_{i}|c_{i-1}) =\left\{\begin{matrix}
  \frac{\pi _{vx}}{Z}&if(v,x)\epsilon E \\ 
  0&otherwise 
-\end{matrix}\right.$  
+\end{matrix}\right.$$  
 在上式中，$\pi_{vx}$为结点$v$到$x$未归一化的转移概率。Z是为了归一化。  
 node2vec通过设置两个参数$p$和$q$引导游走的方向(如图4)，具体的:  
-$\alpha _{pq}(t,x)=\left\{\begin{matrix}
+$$\alpha _{pq}(t,x)=\left\{\begin{matrix}
  \frac{1}{p}&ifd_{tx}=0 \\ 
  1& ifd_{tx}=1\\ 
  \frac{1}{q}& ifd_{tx}=2
-\end{matrix}\right.$  
+\end{matrix}\right.$$ 
 $d_{tx}$表示结点$t$到结点$x$的距离。
-则结点t到结点x的转移概率$\pi_{tx}=\alpha_{pq}(t,x)\cdot w_{tx}$。
+则结点t到结点x的转移概率$$\pi_{tx}=\alpha_{pq}(t,x)\cdot w_{tx}$$。
 ![node_walk](/images/graph/node2vec_1.png)
 **<center>图3 node2vec游走策略</center>**
 
@@ -78,7 +78,7 @@ $d_{tx}$表示结点$t$到结点$x$的距离。
 具体的算法实现如下:  
 ![node2vec_algo](/images/graph/node2vec_2.png)
 PreprocessModifiedWeights方法根据$p$和$q$预先算好两个节点之间的转移概率,方便后续使用。
-在node2vec中为了减少计算量，随机游走的长度为$l$, 上下文的长度选择了$k$($k<l$), 则一次游走可以为$l-k$个结点中的每个结点生成k个上下文结点。
+在node2vec中为了减少计算量，随机游走的长度为$l$, 上下文的长度选择了\(k\)(\(k<l\)), 则一次游走可以为\(l-k\)个结点中的每个结点生成k个上下文结点。
 
 node2vec采取了灵活的游走的方法，在许多任务上取得了较好的效果。但是也有一定的局限性:
 1. 没有参数共享。结点之间的embeeding之间没有参数共享。
