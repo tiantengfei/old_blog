@@ -7,11 +7,8 @@ category: deeplearning
 imagefeature: cover6.jpg
 comments: true
 share: true
-math: true
+mathjax: true
 ---
-<script type="text/javascript" async
-  src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-MML-AM_CHTML">
-</script>
 
 图是一种常见的数据结构，广泛地应用于计算机以及相关领域。社交网络、分子结构、蛋白质结构以及推荐系统都能当做图来对待。本文介绍了当前深度学习在图上的应用。利用深度学习将图的结点或者子图映射为一个低维的向量，反映图的结构信息以及结点或子图的属性信息。  
 
