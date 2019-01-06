@@ -25,7 +25,7 @@ mathjax: true
 2. 结点之间真实的相似度
   $s_{g}$（类似于target）。例如可以将邻接矩阵A当做结点之间的真实相似度。
 3. 一个decoder:利用encode后的低维向量计算图中结点的相似程度。  
-$DEC\left ( z_{i},z_{j} \right )\approx s_{g}\left ( z_{i},z_{j}\right )$
+$$DEC\left ( z_{i},z_{j} \right )\approx s_{g}\left ( z_{i},z_{j}\right )$$
 
 1. loss函数。  
  $$\sum_{(v_{i},v_{j})\in D)}l\left( DEC\left ( z_{i},z_{j} \right ), s_{g}\left ( z_{i},z_{j}\right )\right )$$
@@ -56,7 +56,7 @@ $$L= \sum_{(v_{i},v_{j})\in D)} \left \|DEC\left ( z_{i},z_{j} \right )-s_{g}\le
 **<center>图3 DFS和BFS学习的embeeding对比 DFS(上) BFS(下)</center>**
 
 现实中的图常常同时具有以上两种属性，node2vec在bfs和dfs基础之上设计了更加灵活的邻近结点的采样的方法，提高了结点embeeding在各种任务上的表现。  
-假设随机游走的长度为$l$，$c_{i}$是这次游走的第$i$个结点，假设初始的结点$c_{0}$为$u$，则
+假设随机游走的长度为 \(l\)，\(c_{i}\)是这次游走的第$i$个结点，假设初始的结点$c_{0}$为$u$，则
 $$P(c_{i}|c_{i-1}) =\left\{\begin{matrix}
  \frac{\pi _{vx}}{Z}&if(v,x)\epsilon E \\ 
  0&otherwise 
@@ -69,7 +69,8 @@ $$\alpha _{pq}(t,x)=\left\{\begin{matrix}
  \frac{1}{q}& ifd_{tx}=2
 \end{matrix}\right.$$ 
 $d_{tx}$表示结点$t$到结点$x$的距离。
-则结点t到结点x的转移概率$$\pi_{tx}=\alpha_{pq}(t,x)\cdot w_{tx}$$。
+则结点t到结点x的转移概率
+$$\pi_{tx}=\alpha_{pq}(t,x)\cdot w_{tx}$$
 ![node_walk](/images/graph/node2vec_1.png)
 **<center>图3 node2vec游走策略</center>**
 
