@@ -9,6 +9,9 @@ comments: true
 share: true
 math: true
 ---
+<script type="text/javascript" async
+  src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-MML-AM_CHTML">
+</script>
 
 图是一种常见的数据结构，广泛地应用于计算机以及相关领域。社交网络、分子结构、蛋白质结构以及推荐系统都能当做图来对待。本文介绍了当前深度学习在图上的应用。利用深度学习将图的结点或者子图映射为一个低维的向量，反映图的结构信息以及结点或子图的属性信息。  
 
@@ -26,6 +29,7 @@ math: true
   $s_{g}$（类似于target）。例如可以将邻接矩阵A当做结点之间的真实相似度。
 3. 一个decoder:利用encode后的低维向量计算图中结点的相似程度。  
 $DEC\left ( z_{i},z_{j} \right )\approx s_{g}\left ( z_{i},z_{j}\right )$
+
 1. loss函数。  
  $\sum_{(v_{i},v_{j})\in D)}l\left( DEC\left ( z_{i},z_{j} \right ), s_{g}\left ( z_{i},z_{j}\right )\right )$
     
